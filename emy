@@ -1,0 +1,16 @@
+def verificar_faixa_etaria(ano_nascimento):
+    from datetime import datetime
+
+    
+    ano_atual = datetime.now().year
+
+    idade = ano_atual - ano_nascimento
+
+    if idade <= 12:
+        return "Criança"
+    elif 13 <= idade <= 17:
+        return "Jovem"
+    elif 18 <= idade <= 64:
+        return "Adulto"
+    else:
+        return "Idoso"
